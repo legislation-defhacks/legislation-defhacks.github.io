@@ -1,1 +1,5 @@
+
 curl "https://api.propublica.org/congress/v1/115/senate/members.json" -H "X-API-Key: FDBDTKNO6cAmhbDXpAACrvLL82JRryke3RN7oU9"
+
+Get a specific member's vote position (K000388):
+curl "https://api.propublica.org/congress/v1/members/A000360/votes.json" -H "X-API-Key: FDBDTKNO6cAmhbDXpAACrvLL82JRryke3RN7oU9"

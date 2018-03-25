@@ -58,10 +58,23 @@ for folder in os.listdir(path):
                     vote = "Present"
             personvotes.append(vote)
 
-
-X = np.array(bills)
-Y = np.array(personvotes)
+trainbills = bills[:614]
+testbills = bills[-50:]
+trainvotes = personvotes[:614]
+X = np.array(trainbills)
+Y = np.array(trainvotes)
 
 logreg = linear_model.LogisticRegression(C=1e5)
 logreg.fit(X, Y)
+Z = np.array(testbills)
+
+test_ans = personvotes[-50:]
+predictions = logreg.predict(Z)
+
+accuracy = 0
+for i in range(len(predictions)):
+    if test_ans[i] == predictions[i]:
+        accuracy += 1
+print(accuracy)
+
 # logreg.predict(Z)

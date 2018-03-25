@@ -7,7 +7,7 @@ from sklearn import linear_model, datasets
 # payload = {'X-API-Key': 'FDBDTKNO6cAmhbDXpAACrvLL82JRryke3RN7oU9'}
 # request = requests.get('https://api.propublica.org/congress/v1/members/K000388/votes.json', headers=payload)
 # jsonParse = request.json()
-person = "Jayapal"
+person = "Ryan (OH)"
 bills = []
 path = 'data/votes/2017/'
 personvotes = []
@@ -61,14 +61,15 @@ for folder in os.listdir(path):
 trainbills = bills[:614]
 testbills = bills[-50:]
 trainvotes = personvotes[:614]
+test_ans = personvotes[-50:]
+
 X = np.array(trainbills)
 Y = np.array(trainvotes)
 
-logreg = linear_model.LogisticRegression(C=1e5)
+logreg = linear_model.LogisticRegression()
 logreg.fit(X, Y)
 Z = np.array(testbills)
 
-test_ans = personvotes[-50:]
 predictions = logreg.predict(Z)
 
 accuracy = 0
@@ -76,5 +77,3 @@ for i in range(len(predictions)):
     if test_ans[i] == predictions[i]:
         accuracy += 1
 print(accuracy)
-
-# logreg.predict(Z)

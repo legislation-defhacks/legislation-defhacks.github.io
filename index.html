@@ -7,6 +7,7 @@ Start of webpage about ml and predicting votes for users. -->
         <title>Voting Predictions</title>
         <script src="https://d3js.org/d3.v4.min.js"></script>
         <script src="index.js"> </script>
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
         <!--<link href="recipe.css" type="text/css" rel="stylesheet" /> -->
     </head>
     <body>
@@ -14,14 +15,25 @@ Start of webpage about ml and predicting votes for users. -->
     <p> Are you curious how members of the house of representatives will vote on recent bills? We
       created an ML algorithm that predicts whether or not congressional members will vote yes or 
     no on a particular bill. </p>
-		<p> Choose the bill to predict: </p>
-    <p> Choose the representative to predict for: </p>
-    <p> Paul Ryan-R (Speaker of the House) </p>
-    <p> Nancy Pelosi-D (Minority Leader of the House) </p>
-    <p> Kevin McCarthy-R (Majority Leader of the House) </p>
-    <p> Pramila Jayapal-D </p>
+		<h2> Choose the bill to predict: </h2>
+    <div>
+      <form>
+        <input type ="radio" name="bill" id="gun-bill" /> <label for="gun_bill"> Gun Bill Placeholder </label>
+        <input type ="radio" name="bill" id="sustainability-bill" /> <label for="sustainability_bill"> Sustainability Bill Placeholder </label>
+        <input type ="radio" name="bill" id="accessability-bill" /> <label for="accessability_bill"> Accessability Bill Placeholder </label>
+      </form>
+    </div>
+    <h2> Choose the representative to predict for: </h2>
+    <div id = "representatives">
+      <form>
+        <input type ="radio" name="rep" id="paul_ryan" value="paul_ryan" /> <label for="paul_ryan"> Paul Ryan-R (Speaker of the House) </label>
+        <input type = "radio" name="rep" id ="nancy_pelosi" value="nancy_pelosi" /> <label for="nancy_pelosi"> Nancy Pelosi-D (Minority Leader of the House) </label>
+        <input type = "radio" name="rep" id="kevin_mccarthy" value="kevin_mccarthy" /> <label for="kevin_mccarty"> Kevin McCarthy-R (Majority Leader of the House) </label>
+        <input type = "radio" name="rep" id="pramila_jayapal" value="pramila_jayapal" /> <label> Pramila Jayapal-D </label>
+      </form>
+    </div>
     <button id = "predict"> Predict Results! </button>
-    <div id = "results"> 
+    <div id = "results" class="container"> 
 
     </div>
     </body>

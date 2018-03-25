@@ -11,17 +11,18 @@ Start of webpage about ml and predicting votes for users. -->
     </head>
     <body>
 		<h1>How will a house of representative member vote on a new bill?</h1> 
-		<p> Search your house of representative member by state </p>
-		<div id = "search_member">
-			<p> State </p> 
-			<select id = "state-selector"> 
-			</select>
-			<button type = "button" id="searchbystate"> search by state </button> 
-        </div>
-        <div id = "result-people"> 
-       	</div>
-       	<div id = "choose-bill">
-       		<h2> What bill do you want to predict on? </h2>
-       	</div>
+    <p> Are you curious how members of the house of representatives will vote on recent bills? We
+      created an ML algorithm that predicts whether or not congressional members will vote yes or 
+    no on a particular bill. </p>
+		<p> Choose the bill to predict: </p>
+    <p> Choose the representative to predict for: </p>
+    <p> Paul Ryan-R (Speaker of the House) </p>
+    <p> Nancy Pelosi-D (Minority Leader of the House) </p>
+    <p> Kevin McCarthy-R (Majority Leader of the House) </p>
+    <p> Pramila Jayapal-D </p>
+    <button id = "predict"> Predict Results! </button>
+    <div id = "results"> 
+
+    </div>
     </body>
 </html>

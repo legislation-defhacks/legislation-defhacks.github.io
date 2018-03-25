@@ -33,12 +33,11 @@ def trainPersonClassifier(person):
                     bill.append(hash(json_data["bill"]["type"]))
                     bill.append(hash(json_data["category"]))
                     bill.append(hash(json_data["requires"]))
-                    # bill.append(newHash(json_data["subject"]))
-                    if "subject" in json_data:
-                        bill.append(newHash(json_data["subject"]))
-                    else:
-                        bill.append(newHash(json_data["question"]))
                     bill.append(newHash(json_data["type"]))
+                    if "question" in json_data:
+                        bill.append(newHash(json_data["question"]))
+                    else:
+                        bill.append(newHash(json_data["subject"]))
 
 
                     # search for person in the votes

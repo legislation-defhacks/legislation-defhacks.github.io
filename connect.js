@@ -3,7 +3,7 @@
 function buildPopupDom() {
   var radiosBill = document.getElementsByName('bill');
   var valueBill = "";
-  for(int i = 0; i < radiosBill.length; i++) {
+  for(var i = 0; i < radiosBill.length; i++) {
     if(radiosBill[i].checked) {
       valueBill = radiosBill[i].value;
       break;
@@ -11,7 +11,7 @@ function buildPopupDom() {
   }
   var radiosPerson = document.getElementsByName('person');
   var valuePerson = "";
-  for(int i = 0; i < radiosPerson.length; i++) {
+  for(var i = 0; i < radiosPerson.length; i++) {
     if(radiosPerson[i].checked) {
       valuePerson = radiosPerson[i].value;
       break;

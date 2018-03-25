@@ -7,11 +7,11 @@ from sklearn import linear_model, datasets
 # TODO: connect up the code
 # TODO: predict for each person how the voting goes
 # TODO: create an extra page to predict stuff
+# TODO: change the hashing system
 def newHash(str):
     res = 0
     for word in str.split(" "):
         for c in word:
-            # print(c, hash(c))
             res += hash(c)
     return res
 
@@ -108,6 +108,6 @@ def trainPersonClassifier(person):
     b1 = logreg.predict(Z)
     print(b1)
 
-    return accuracy
+    return accuracy, b1
 
 trainPersonClassifier("Pelosi")

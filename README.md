@@ -18,4 +18,4 @@ and party affiliations.
 
 **Sources**
 
-Some materials, tools, and people that we relied on were d3, Mike Bostock, and https://github.com/unitedstates/congress.
+Some materials, tools, and people that we relied on were d3, Mike Bostock, https://github.com/unitedstates/congress, http://scikit-learn.org.

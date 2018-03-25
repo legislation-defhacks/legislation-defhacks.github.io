@@ -9,28 +9,7 @@ function buildPopupDom(divName, datas) {
       urlArray: JSON.stringify(datas)
     },
     success: function( result ) {
-      // var position = "";
-      // result = parseInt(result);
-      // if(result <= -75){
-      //   //really liberal
-      //   position = "Mostly Liberal"
-      // }else if(result >= -75 && result <= -25){
-      //   position = "Semi Liberal"
-      // }else if(result >= -25 && result <= 0){
-      //   position = "Neutral, Leans Liberal"
-      // }else if(result >= 0 && result <= 25){
-      //   position = "Neutral, Leans Conservative"
-      // }else if(result >= 25 && result <= 75){
-      //   position = "Semi Conservative"
-      // }else if(result >= 75){
-      //   position = "Mostly Conservative"
-      // }
-      // var tickerPos = (result + 100) / 2;
-      // console.log(tickerPos);
-      // $("#exposure_title").text(position);
-      // $(".exposure_ticker").css("margin-left", tickerPos + "%");
       $( "#finalscore" ).html( "<strong>" + result + "%</strong>" );
-      // $("#lean").text(position);
     }
   });
 

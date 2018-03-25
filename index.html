@@ -15,26 +15,20 @@ Start of webpage about ml and predicting votes for users. -->
     <p> Are you curious how members of the house of representatives will vote on recent bills? We
       created an ML algorithm that predicts whether or not congressional members will vote yes or 
     no on a particular bill. </p>
-		<h2> Choose the bill to predict: </h2>
-    <div>
-      <form>
-        <input type ="radio" name="bill" id="gun-bill" /> <label for="gun_bill"> H.R.34 - Safe Students Act </label>
-        <input type ="radio" name="bill" id="sustainability-bill" /> <label for="sustainability_bill"> H.R.5248 - Sustainable Shark Fisheries and Trade Act </label>
-        <input type ="radio" name="bill" id="accessability-bill" /> <label for="accessability_bill"> H.R.5241 - Secure Act of 2018 </label>
-      </form>
-    </div>
-    <h2> Choose the representative to predict for: </h2>
-    <div id = "representatives">
-      <form>
-        <input type ="radio" name="rep" id="paul_ryan" value="paul_ryan" /> <label for="paul_ryan"> Paul Ryan-R (Speaker of the House) </label>
-        <input type = "radio" name="rep" id ="nancy_pelosi" value="nancy_pelosi" /> <label for="nancy_pelosi"> Nancy Pelosi-D (Minority Leader of the House) </label>
-        <input type = "radio" name="rep" id="kevin_mccarthy" value="kevin_mccarthy" /> <label for="kevin_mccarty"> Kevin McCarthy-R (Majority Leader of the House) </label>
-        <input type = "radio" name="rep" id="pramila_jayapal" value="pramila_jayapal" /> <label> Pramila Jayapal-D </label>
-      </form>
-    </div>
-    <button id = "predict"> Predict Results! </button>
-    <div id = "results" class="container"> 
 
+    <form action="/runKarishma.py" target="_blank">
+    	<strong>Choose the bill to predict:</strong> <br>
+        <input type ="radio" name="bill" id="gun-bill" /> <label for="gun_bill"> H.R.34 - Safe Students Act </label> <br>
+        <input type ="radio" name="bill" id="sustainability-bill" /> <label for="sustainability_bill"> H.R.5248 - Sustainable Shark Fisheries and Trade Act </label> <br>
+        <input type ="radio" name="bill" id="accessability-bill" /> <label for="accessability_bill"> H.R.5241 - Secure Act of 2018 </label> <br> <br>
+
+        <strong>Choose the representative to predict for:</strong> <br>
+        <input type ="radio" name="rep" id="paul_ryan" value="paul_ryan" /> <label for="paul_ryan"> Paul Ryan-R (Speaker of the House) </label> <br>
+        <input type = "radio" name="rep" id ="nancy_pelosi" value="nancy_pelosi" /> <label for="nancy_pelosi"> Nancy Pelosi-D (Minority Leader of the House) </label> <br>
+        <input type = "radio" name="rep" id="kevin_mccarthy" value="kevin_mccarthy" /> <label for="kevin_mccarty"> Kevin McCarthy-R (Majority Leader of the House) </label> <br>
+        <input type = "radio" name="rep" id="pramila_jayapal" value="pramila_jayapal" /> <label> Pramila Jayapal-D </label> <br> <br>
+        <input type="submit" value="Predict Results!">
+    </form>
     </div>
     </body>
 </html>

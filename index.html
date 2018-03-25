@@ -11,27 +11,27 @@ Start of webpage about ml and predicting votes for users. -->
         <!--<link href="recipe.css" type="text/css" rel="stylesheet" /> -->
     </head>
     <body>
-		<h1>How will a house of representative member vote on a new bill?</h1> 
+		<h1>How will a house of representative member vote on a new bill?</h1>
     <p> Are you curious how members of the house of representatives will vote on recent bills? We
-      created an ML algorithm that predicts whether or not congressional members will vote yes or 
+      created an ML algorithm that predicts whether or not congressional members will vote yes or
     no on a particular bill. </p>
 
-    <form action="/runKarishma.py" target="_blank">
+    <form action="/runKarishma.py" target="_blank" method="POST">
     	<strong>Choose the bill to predict:</strong> <br>
         <input type ="radio" name="bill" id="gun-bill" value="gun_bill"/> <label for="gun_bill"> H.R.34 - Safe Students Act </label> <br>
         <input type ="radio" name="bill" id="sustainability-bill" value="sustainability-bill"/> <label for="sustainability_bill"> H.R.5248 - Sustainable Shark Fisheries and Trade Act </label> <br>
         <input type ="radio" name="bill" id="accessability-bill" value="accessability-bill"/> <label for="accessability_bill"> H.R.5241 - Secure Act of 2018 </label> <br> <br>
 
         <strong>Choose the representative to predict for:</strong> <br>
-        
+
         <input type="image" name="rep" id="paul_ryan" value="paul_ryan" src="\pictures\paul_ryan.jpg" width="25%" height="25%"/>  <label for="paul_ryan"> Paul Ryan-R (Speaker of the House) </label>  <br>
-        
+
         <input type="image" name="rep" id="nancy_pelosi" value="nancy_pelosi" src="\pictures\nancy_pelosi.jpg" width="25%" height="25%"/>  <label for="nancy_pelosi"> Nancy Pelosi-D (Minority Leader of the House) </label> <br>
 
         <input type="image" name="rep" id="kevin_mccarthy" value="kevin_mccarthy" src="\pictures\kevin_mccarthy.jpg" width="25%" height="25%"/>  <label for="kevin_mccarthy"> Kevin McCarthy-R (Majority Leader of the House) </label> <br>
-        
+
         <input type="image" name="rep" id="pramila_jayapal" value="pramila_jayapal" src="\pictures\pramila_jayapal.jpg" width="25%" height="25%"/>  <label for="pramila_jayapal"> Pramila Jayapal-D </label> <br> <br>
-        
+
         <input type="submit" value="Predict Results!">
     </form>
     </div>

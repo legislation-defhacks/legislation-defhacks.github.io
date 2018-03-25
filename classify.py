@@ -4,6 +4,18 @@ import os
 import numpy as np
 from sklearn import linear_model, datasets
 
+# import urllib
+# import csv
+# from flask import Flask
+# from flask import request
+# from flask_cors import CORS
+# import json
+
+# import os, sys, csv, urllib
+
+# app = Flask(__name__)
+# CORS(app)
+
 # TODO: connect up the code
 # TODO: predict for each person how the voting goes
 # TODO: create an extra page to predict stuff
@@ -19,7 +31,7 @@ tb1 = [hash("hr"), hash("passage"), hash("1/2"), newHash("Crime, Terrorism, Home
 tb2 = [hash("hr"), hash("passage"), hash("1/2"), newHash("Natural Resources; Ways and Means"), newHash("To amend and enhance the High Seas Driftnet Fishing Moratorium Protection Act to improve the conservation of sharks.")]
 tb3 = [hash("hr"), hash("passage"), hash("1/2"), newHash("Education and the Workforce"), newHash("To address the needs of individuals with disabilities within the Jeanne Clery Disclosure of Campus Security Policy and Campus Crime Statistics Act.")]
 
-def trainPersonClassifier(person):
+def trainPersonClassifier(person, billnum):
     bills = []
     personvotes = []
     years = ["2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018"]
@@ -108,6 +120,54 @@ def trainPersonClassifier(person):
     b1 = logreg.predict(Z)
     print(b1)
 
-    return accuracy, b1
+    return accuracy, b1[billnum]
 
-trainPersonClassifier("Pelosi")
+trainPersonClassifier("Pelosi", 0)
+
+# @app.route("/spectrum" , methods=['GET', 'POST'])
+# def spectrum():
+#     urlList = request.form['urlArray']
+#
+#     urlList = json.loads(urlList)
+#     print urlList, "FIRST ONE"
+#     # print urlList
+#
+#     numberOfArticles = len(urlList) + 2
+#     #print numberOfArticles
+#     conservativeScore = 1
+#     liberalScore = 1
+#     for url in urlList:
+#         try:
+#             actualURL = url.split("/")[2]
+#         except:
+#             print url, "error!!"
+#         # actualURL = url.split("/")[2]
+#         if "www." in actualURL:
+#             actualURL = actualURL.split("www.")[1]
+#         else:
+#             continue
+#         with open('data_liberal.csv', 'r') as f:
+#             for line in f.read().split('\r'):
+#                 if actualURL == line:
+#                     liberalScore += 1
+#         with open('data_conservative.csv', 'r') as f:
+#             for line in f.read().split('\r'):
+#                 if actualURL == line:
+#                     conservativeScore += 1
+#
+#     #print conservativeScore
+#     conservativeScore = float(conservativeScore)/float(numberOfArticles)
+#     liberalScore = float(liberalScore)/float(numberOfArticles)
+#     #print conservativeScore
+#     #print liberalScore
+#     val = 0
+#     if liberalScore > conservativeScore:
+#         val =  -liberalScore*100
+#     elif conservativeScore > liberalScore:
+#         val =  conservativeScore*100
+#     else:
+#         val =  0
+#     print "FINALLLL VALUEEEEE", str(val)
+#     return str(val)
+#
+#     # return "88"

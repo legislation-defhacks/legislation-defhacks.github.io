@@ -36,14 +36,17 @@ function buildPopupDom() {
   var array = [valueBill, valuePerson];
   var valueFirstRadio = document.getElementById("")
   $.ajax({
-    type: "POST",
+    type: "POST", async:false,
     url: "http://localhost:5000/spectrum",
     data: {
       urlArray: JSON.stringify(array)
     },
-    success: function( result ) {
-      $( "#finalscore" ).html( "<strong>" + result + "%</strong>" );
-    }
+    success: function(result) {
+      $("#finalscore").html( "<strong>" + result + "%</strong>" );
+    },
+		error: function(xhur, textStatus, errorThrown) {
+			alert('request failed' + errorThrown);
+		}
   });
 
   // $.ajax({

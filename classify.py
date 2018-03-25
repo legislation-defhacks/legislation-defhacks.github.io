@@ -119,7 +119,7 @@ def trainPersonClassifier(person, billnum):
 
 # trainPersonClassifier("Pelosi", 0)
 
-@app.route("/spectrum" , methods=['GET', 'POST'])
+@app.route("/spectrum" , methods=['POST'])
 def spectrum():
     urlList = request.form['urlArray']
     print(urlList, "HEYY")
@@ -167,5 +167,6 @@ def spectrum():
     val = trainPersonClassifier("Pelosi", 1)
     print(val)
     # return val
-    return "88"
+    dict = {"key": "value"}
+    return json.dumps(dict)
 app.run()

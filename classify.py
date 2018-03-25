@@ -7,9 +7,16 @@ from sklearn import linear_model, datasets
 # TODO: connect up the code
 # TODO: predict for each person how the voting goes
 # TODO: create an extra page to predict stuff
-tb1 = [hash("hr"), hash("passage"), hash("1/2"), hash("To repeal the Gun-Free School Zones Act of 1990 and amendments to that Act.")]
-tb2 = [hash("hr"), hash("passage"), hash("1/2"), hash("To amend and enhance the High Seas Driftnet Fishing Moratorium Protection Act to improve the conservation of sharks.")]
-tb3 = [hash("hr"), hash("passage"), hash("1/2"), hash("To address the needs of individuals with disabilities within the Jeanne Clery Disclosure of Campus Security Policy and Campus Crime Statistics Act.")]
+def newHash(str):
+    res = 0
+    for word in str.split(" "):
+        res += hash(word)
+    return res
+
+tb1 = [hash("hr"), hash("passage"), hash("1/2"), newHash("Crime, Terrorism, Homeland Security, and Investigations."), newHash("To repeal the Gun-Free School Zones Act of 1990 and amendments to that Act.")]
+tb2 = [hash("hr"), hash("passage"), hash("1/2"), newHash("Natural Resources; Ways and Means"), newHash("To amend and enhance the High Seas Driftnet Fishing Moratorium Protection Act to improve the conservation of sharks.")]
+tb3 = [hash("hr"), hash("passage"), hash("1/2"), newHash("Education and the Workforce"), newHash("To address the needs of individuals with disabilities within the Jeanne Clery Disclosure of Campus Security Policy and Campus Crime Statistics Act.")]
+
 def trainPersonClassifier(person):
     bills = []
     personvotes = []
@@ -22,11 +29,18 @@ def trainPersonClassifier(person):
             if 'bill' in json_data:
                 if json_data["chamber"] == 'h':
                     bill = []
-                    # print(filename)
+                    print(filename)
                     bill.append(hash(json_data["bill"]["type"]))
                     bill.append(hash(json_data["category"]))
                     bill.append(hash(json_data["requires"]))
-                    bill.append(hash(json_data["type"]))
+                    # bill.append(newHash(json_data["subject"]))
+                    if "subject" in json_data:
+                        bill.append(newHash(json_data["subject"]))
+                    else:
+                        bill.append(newHash(json_data["question"]))
+                    bill.append(newHash(json_data["type"]))
+
+
                     # search for person in the votes
                     votes = json_data["votes"]
                     # yes votes (aye, yea, and yes)

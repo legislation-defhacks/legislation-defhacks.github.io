@@ -10,29 +10,18 @@ Start of webpage about ml and predicting votes for users. -->
         <!--<link href="recipe.css" type="text/css" rel="stylesheet" /> -->
     </head>
     <body>
-		<h1>How will your congress member vote on a new bill?</h1> 
-		<p> Search your congress member by name or by address </p>
+		<h1>How will a house of representative member vote on a new bill?</h1> 
+		<p> Search your house of representative member by state </p>
 		<div id = "search_member">
 			<p> State </p> 
 			<select id = "state-selector"> 
-				<!--<script> d3.json("state-arr.json", function(data) {
-					var stateSelector = 
-  					document.getElementById("state-selector");
-  					data.forEach(function(d) {
-  						var newOption = document.createElement("option");
-  						newOption.label = d.abbreviation;
-  						newOption.innerHTML = d.name + "(" + d.abbreviation + ")";
-  						stateSelector.appendChild(newOption);
-  					});
-					//for(int i = 0; i < data.length; i++) {
-  						
-  					//}
-				});</script> -->
-
 			</select>
 			<button type = "button" id="searchbystate"> search by state </button> 
         </div>
-        <div id = "result"> 
+        <div id = "result-people"> 
+       	</div>
+       	<div id = "choose-bill">
+       		<h2> What bill do you want to predict on? </h2>
        	</div>
     </body>
 </html>

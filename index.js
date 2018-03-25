@@ -1,4 +1,4 @@
-//javascript file with functions 
+//javascript file with functions
 
 (function (){
 
@@ -9,8 +9,8 @@
 	selector for the page. */
 	window.onload = function() {
 		document.getElementById("submit").onclick = buildPopupDom;
-		//addStatesToDropDown(); 
-		//document.getElementById("searchbystate").onclick = findRepresentatives; 
+		//addStatesToDropDown();
+		//document.getElementById("searchbystate").onclick = findRepresentatives;
 	};
 
 	// Given an array of URLs, build a DOM list of those URLs in the
@@ -18,7 +18,8 @@
 function buildPopupDom() {
   var radiosBill = document.getElementsByName('bill');
   var valueBill = "";
-  for(int i = 0; i < radiosBill.length; i++) {
+
+  for(var i = 0; i < radiosBill.length; i++) {
     if(radiosBill[i].checked) {
       valueBill = radiosBill[i].value;
       break;
@@ -26,7 +27,7 @@ function buildPopupDom() {
   }
   var radiosPerson = document.getElementsByName('person');
   var valuePerson = "";
-  for(int i = 0; i < radiosPerson.length; i++) {
+  for(var i = 0; i < radiosPerson.length; i++) {
     if(radiosPerson[i].checked) {
       valuePerson = radiosPerson[i].value;
       break;
@@ -70,20 +71,20 @@ function buildPopupDom() {
 }
 
 
-	//setting up our ajax request to get data. 
-	//takes in the url that we are requesting and the 
-	//onload function that is used once the data is loaded. 
+	//setting up our ajax request to get data.
+	//takes in the url that we are requesting and the
+	//onload function that is used once the data is loaded.
 	function ajaxRequest(url, onloadFunction) {
 		document.getElementById("")
-		var ajax = new XMLHttpRequest(); 
-		ajax.onload = onloadFunction; 
+		var ajax = new XMLHttpRequest();
+		ajax.onload = onloadFunction;
 		ajax.open("GET", url, true);
 		ajax.setRequestHeader("X-API-Key", "FDBDTKNO6cAmhbDXpAACrvLL82JRryke3RN7oU9");
-		ajax.send(); 
+		ajax.send();
 	}
 
 
-	//could do a boolean for house of representatives or not. 
+	//could do a boolean for house of representatives or not.
 	function searchByState() {
 		var stateSelector = document.getElementById("state-selector");
 		var selectedState = stateSelector.options[stateSelector.selectedIndex].value;
@@ -103,10 +104,10 @@ function buildPopupDom() {
 		})
 	}
 
-	//adds the state lables to the dropdown with each of the choices. 
+	//adds the state lables to the dropdown with each of the choices.
 	function addStatesToDropDown() {
 		d3.json("state-arr.json", function(data) {
-			var stateSelector = 
+			var stateSelector =
   					document.getElementById("state-selector");
   			data.forEach(function(d) {
   				var newOption = document.createElement("option");
@@ -115,6 +116,6 @@ function buildPopupDom() {
   				stateSelector.appendChild(newOption);
   			});
 		});
-	} 
+	}
 
 })();

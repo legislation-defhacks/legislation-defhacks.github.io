@@ -1,12 +1,29 @@
 // Given an array of URLs, build a DOM list of those URLs in the
 // browser action popup.
-function buildPopupDom(divName, datas) {
-
+function buildPopupDom() {
+  var radiosBill = document.getElementsByName('bill');
+  var valueBill = "";
+  for(int i = 0; i < radiosBill.length; i++) {
+    if(radiosBill[i].checked) {
+      valueBill = radiosBill[i].value;
+      break;
+    }
+  }
+  var radiosPerson = document.getElementsByName('person');
+  var valuePerson = "";
+  for(int i = 0; i < radiosPerson.length; i++) {
+    if(radiosPerson[i].checked) {
+      valuePerson = radiosPerson[i].value;
+      break;
+    }
+  }
+  var array = [valueBill, valuePerson];
+  var valueFirstRadio = document.getElementById("")
   $.ajax({
     type: "POST",
     url: "http://localhost:5000/spectrum",
     data: {
-      urlArray: JSON.stringify(datas)
+      urlArray: JSON.stringify(array)
     },
     success: function( result ) {
       $( "#finalscore" ).html( "<strong>" + result + "%</strong>" );
@@ -17,7 +34,7 @@ function buildPopupDom(divName, datas) {
     type: "POST",
     url: "http://localhost:5000/credibility",
     data: {
-      urlArray: JSON.stringify(datas)
+      urlArray: JSON.stringify(array)
     },
     success: function( result ) {
         var creditiblity = "";

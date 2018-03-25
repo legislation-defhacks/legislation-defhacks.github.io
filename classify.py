@@ -4,22 +4,18 @@ import os
 import numpy as np
 from sklearn import linear_model, datasets
 
-# import urllib
-# import csv
-# from flask import Flask
-# from flask import request
-# from flask_cors import CORS
-# import json
+import urllib
+import csv
+from flask import Flask
+from flask import request
+from flask_cors import CORS
+import json
 
-# import os, sys, csv, urllib
+import os, sys, csv, urllib
 
-# app = Flask(__name__)
-# CORS(app)
+app = Flask(__name__)
+CORS(app)
 
-# TODO: connect up the code
-# TODO: predict for each person how the voting goes
-# TODO: create an extra page to predict stuff
-# TODO: change the hashing system
 def newHash(str):
     res = 0
     for word in str.split(" "):
@@ -124,50 +120,51 @@ def trainPersonClassifier(person, billnum):
 
 trainPersonClassifier("Pelosi", 0)
 
-# @app.route("/spectrum" , methods=['GET', 'POST'])
-# def spectrum():
-#     urlList = request.form['urlArray']
-#
-#     urlList = json.loads(urlList)
-#     print urlList, "FIRST ONE"
-#     # print urlList
-#
-#     numberOfArticles = len(urlList) + 2
-#     #print numberOfArticles
-#     conservativeScore = 1
-#     liberalScore = 1
-#     for url in urlList:
-#         try:
-#             actualURL = url.split("/")[2]
-#         except:
-#             print url, "error!!"
-#         # actualURL = url.split("/")[2]
-#         if "www." in actualURL:
-#             actualURL = actualURL.split("www.")[1]
-#         else:
-#             continue
-#         with open('data_liberal.csv', 'r') as f:
-#             for line in f.read().split('\r'):
-#                 if actualURL == line:
-#                     liberalScore += 1
-#         with open('data_conservative.csv', 'r') as f:
-#             for line in f.read().split('\r'):
-#                 if actualURL == line:
-#                     conservativeScore += 1
-#
-#     #print conservativeScore
-#     conservativeScore = float(conservativeScore)/float(numberOfArticles)
-#     liberalScore = float(liberalScore)/float(numberOfArticles)
-#     #print conservativeScore
-#     #print liberalScore
-#     val = 0
-#     if liberalScore > conservativeScore:
-#         val =  -liberalScore*100
-#     elif conservativeScore > liberalScore:
-#         val =  conservativeScore*100
-#     else:
-#         val =  0
-#     print "FINALLLL VALUEEEEE", str(val)
-#     return str(val)
-#
-#     # return "88"
+@app.route("/spectrum" , methods=['GET', 'POST'])
+def spectrum():
+    # urlList = request.form['urlArray']
+    #
+    # urlList = json.loads(urlList)
+    # print(urlList, "FIRST ONE")
+    # print urlList
+
+    # numberOfArticles = len(urlList) + 2
+    # #print numberOfArticles
+    # conservativeScore = 1
+    # liberalScore = 1
+    # for url in urlList:
+    #     try:
+    #         actualURL = url.split("/")[2]
+    #     except:
+    #         print url, "error!!"
+    #     # actualURL = url.split("/")[2]
+    #     if "www." in actualURL:
+    #         actualURL = actualURL.split("www.")[1]
+    #     else:
+    #         continue
+    #     with open('data_liberal.csv', 'r') as f:
+    #         for line in f.read().split('\r'):
+    #             if actualURL == line:
+    #                 liberalScore += 1
+    #     with open('data_conservative.csv', 'r') as f:
+    #         for line in f.read().split('\r'):
+    #             if actualURL == line:
+    #                 conservativeScore += 1
+    #
+    # #print conservativeScore
+    # conservativeScore = float(conservativeScore)/float(numberOfArticles)
+    # liberalScore = float(liberalScore)/float(numberOfArticles)
+    # #print conservativeScore
+    # #print liberalScore
+    # val = 0
+    # if liberalScore > conservativeScore:
+    #     val =  -liberalScore*100
+    # elif conservativeScore > liberalScore:
+    #     val =  conservativeScore*100
+    # else:
+    #     val =  0
+    # print "FINALLLL VALUEEEEE", str(val)
+    # return str(val)
+
+    return "88"
+app.run()

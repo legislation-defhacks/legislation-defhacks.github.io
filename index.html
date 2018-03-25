@@ -10,6 +10,7 @@ Start of webpage about ml and predicting votes for users. -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
         <!--<link href="recipe.css" type="text/css" rel="stylesheet" /> -->
+        <script src="connect.js"></script>
     </head>
     <body>
     <div>
@@ -18,10 +19,15 @@ Start of webpage about ml and predicting votes for users. -->
       created an ML algorithm that predicts whether or not congressional members will vote yes or
       no on a particular bill. </p>
     </div>
+
+    <div>
+      <h3 id="finalscore">49%</h3>
+    </div>
+
     <hr class="featurette-divider">
 
     <div>
-      <form action="/runKarishma.py" target="_blank">
+      <form name="myForm" onsubmit="" target="_blank">
       <div class = "row">
     	 <h2> <strong>Choose the bill to predict:</strong> </h2> <br>
         <div class = "col-sm-4">

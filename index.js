@@ -2,13 +2,13 @@
 
 (function (){
 
-	var key = ""
+	var key = "FDBDTKNO6cAmhbDXpAACrvLL82JRryke3RN7oU9"
 	"use strict";
 
 	/*Sets up event listeners for button pressing and sets up the puzzle pieces and the background.
 	selector for the page. */
 	window.onload = function() {
-		addStatesToDropDown(); 
+		//addStatesToDropDown(); 
 		//document.getElementById("searchbystate").onclick = findRepresentatives; 
 	};
 
@@ -31,6 +31,17 @@
 		var senateUrl = "https://api.propublica.org/congress/v1/members/" + "senate" + "/" + selectedState + "/current.json";
 		var representativeUrl = "https://api.propublica.org/congress/v1/members/" + "house/" + selectedState + "/1/current.json";
 
+	}
+
+	function mapStateToRepresentativeNumber() {
+		var stateToRepresentativeNumber = [];
+		d3.json("state-district-num.json", function(data) {
+			data.results.forEach(function(d) {
+				stateToRepresentativeNumber.push()
+				//var infoString = "name: " + d.name + ", " + "party: " + d.party
+				//stateToRepresentativeNumber.push("element");
+			});
+		})
 	}
 
 	//adds the state lables to the dropdown with each of the choices. 

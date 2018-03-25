@@ -16,7 +16,6 @@
 	// Given an array of URLs, build a DOM list of those URLs in the
 // browser action popup.
 function buildPopupDom() {
-	debugger;
   var radiosBill = document.getElementsByName('bill');
   var valueBill = "";
 
@@ -36,7 +35,6 @@ function buildPopupDom() {
   }
   var array = [valueBill, valuePerson];
   var valueFirstRadio = document.getElementById("")
-	console.log(array);
   $.ajax({
     type: "POST",
     url: "http://localhost:5000/spectrum",

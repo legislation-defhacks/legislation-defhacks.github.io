@@ -121,8 +121,8 @@ def trainPersonClassifier(person, billnum):
 
 @app.route("/spectrum" , methods=['GET', 'POST'])
 def spectrum():
-    # urlList = request.form['urlArray']
-    # print(urlList, "HEYY")
+    urlList = request.form['urlArray']
+    print(urlList, "HEYY")
     # # urlList = json.loads(urlList)
     # print(urlList, "FIRST ONE")
     # print urlList
@@ -164,6 +164,8 @@ def spectrum():
     #     val =  0
     # print "FINALLLL VALUEEEEE", str(val)
     # return str(val)
-    return trainPersonClassifier("Pelosi", 1)
-    # return "88"
+    val = trainPersonClassifier("Pelosi", 1)
+    print(val)
+    # return val
+    return "88"
 app.run()

@@ -10,7 +10,9 @@ from sklearn import linear_model, datasets
 def newHash(str):
     res = 0
     for word in str.split(" "):
-        res += hash(word)
+        for c in word:
+            # print(c, hash(c))
+            res += hash(c)
     return res
 
 tb1 = [hash("hr"), hash("passage"), hash("1/2"), newHash("Crime, Terrorism, Homeland Security, and Investigations."), newHash("To repeal the Gun-Free School Zones Act of 1990 and amendments to that Act.")]

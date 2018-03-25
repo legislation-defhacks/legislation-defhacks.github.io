@@ -4,10 +4,11 @@ import os
 import numpy as np
 from sklearn import linear_model, datasets
 
-person = "Ryan (OH)"
+
+person = "Jayapal"
 bills = []
 personvotes = []
-years = ["2016", "2017", "2018"]
+years = ["2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018"]
 for year in years:
     path = 'data/votes/' + year + '/'
     for folder in os.listdir(path):
@@ -21,7 +22,6 @@ for year in years:
                 bill.append(hash(json_data["category"]))
                 bill.append(hash(json_data["requires"]))
                 bill.append(hash(json_data["type"]))
-                bills.append(bill)
                 # search for person in the votes
                 votes = json_data["votes"]
                 # yes votes (aye, yea, and yes)
@@ -54,13 +54,21 @@ for year in years:
                 for p in present:
                     if p["display_name"] == person:
                         vote = "Present"
-                personvotes.append(vote)
+                if vote != None:
+                    bills.append(bill)
+                    personvotes.append(vote)
+                else:
+                    break
 
 print(len(bills))
 print(len(personvotes))
-trainbills = bills[:1200]
+
+bill_len = len(bills)
+vote_len = len(personvotes)
+
+trainbills = bills[:bill_len-100]
 testbills = bills[-100:]
-trainvotes = personvotes[:1200]
+trainvotes = personvotes[:bill_len-100]
 test_ans = personvotes[-100:]
 
 X = np.array(trainbills)

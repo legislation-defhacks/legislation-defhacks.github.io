@@ -115,7 +115,7 @@ def trainPersonClassifier(person, billnum):
     b1 = logreg.predict(Z)
     print(b1)
 
-    return accuracy, b1[billnum]
+    return str(accuracy) + " " + str(b1[billnum])
 
 trainPersonClassifier("Pelosi", 0)
 
@@ -164,6 +164,6 @@ def spectrum():
     #     val =  0
     # print "FINALLLL VALUEEEEE", str(val)
     # return str(val)
-
-    return "88"
+    return trainPersonClassifier("Pelosi", 1)
+    # return "88"
 app.run()

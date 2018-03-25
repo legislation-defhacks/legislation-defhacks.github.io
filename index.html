@@ -6,6 +6,7 @@ Start of webpage about ml and predicting votes for users. -->
     <head>
         <title>Voting Predictions</title>
         <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="index.js"> </script>
         <!--<link href="recipe.css" type="text/css" rel="stylesheet" /> -->
     </head>
     <body>
@@ -14,7 +15,7 @@ Start of webpage about ml and predicting votes for users. -->
 		<div id = "search_member">
 			<p> State </p> 
 			<select id = "state-selector"> 
-				<script> d3.json("state-arr.json", function(data) {
+				<!--<script> d3.json("state-arr.json", function(data) {
 					var stateSelector = 
   					document.getElementById("state-selector");
   					data.forEach(function(d) {
@@ -26,9 +27,10 @@ Start of webpage about ml and predicting votes for users. -->
 					//for(int i = 0; i < data.length; i++) {
   						
   					//}
-				});</script>
+				});</script> -->
 
 			</select>
+			<button type = "button" id="searchbystate"> search by state" </button> 
 			<p> Address </p>
 			<input name="address" type = "text" /> 
 			<input type = "submit" value = "Search by address" />

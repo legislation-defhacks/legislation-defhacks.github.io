@@ -1,0 +1,202 @@
+[
+    {
+        "abbreviation": "AL", 
+		"total-districts": 7
+    },
+    {
+        "abbreviation": "AK", 
+		"total-districts": 1
+    },
+    {
+        "abbreviation": "AZ", 
+		"total-districts": 9
+    },
+    {
+        "abbreviation": "AR", 
+		"total-districts": 7
+    },
+    {
+        "abbreviation": "CA", 
+		"total-districts": 53
+    },
+    {
+        "abbreviation": "CO", 
+		"total-districts": 7
+    },
+    {
+        "abbreviation": "CT", 
+		"total-districts": 6
+    },
+    {
+        "abbreviation": "DE", 
+		"total-districts": 1
+    },
+    {
+        "abbreviation": "FL", 
+		"total-districts": 27
+    },
+    {
+        "abbreviation": "GA",
+		"total-districts": 14
+    },
+    {
+        "abbreviation": "HI", 
+		"total-districts": 2
+    },
+    {
+        "abbreviation": "ID", 
+		"total-districts": 2
+    },
+    {
+        "abbreviation": "IL", 
+		"total-districts": 26
+    },
+    {
+        "abbreviation": "IN",
+		"total-districts": 13
+    },
+    {
+        "abbreviation": "IA",
+		"total-districts": 11
+    },
+    {
+        "abbreviation": "KS",
+		"total-districts": 8
+    },
+    {
+        "abbreviation": "KY",
+		"total-districts": 13
+    },
+    {
+        "abbreviation": "LA",
+		"total-districts": 8
+    },
+    {
+        "abbreviation": "ME", 
+		"total-districts": 8
+    },
+    {
+        "abbreviation": "MD", 
+		"total-districts": 8
+    },
+    {
+        "abbreviation": "MA",
+		"total-districts": 20
+    },
+    {
+        "abbreviation": "MI", 
+		"total-districts": 19
+    },
+    {
+        "abbreviation": "MN", 
+		"total-districts": 10
+    },
+    {
+        "abbreviation": "MS", 
+		"total-districts": 8
+    },
+    {
+        "abbreviation": "MO", 
+		"total-districts": 16
+    },
+    {
+        "abbreviation": "MT", 
+		"total-districts": 2
+    },
+    {
+        "abbreviation": "NE", 
+		"total-districts": 6
+    },
+    {
+        "abbreviation": "NV", 
+		"total-districts": 4
+    },
+    {
+        "abbreviation": "NH", 
+		"total-districts": 4
+    },
+    {
+        "abbreviation": "NJ", 
+		"total-districts": 15
+    },
+    {
+        "abbreviation": "NM", 
+		"total-districts": 3
+    },
+    {
+        "abbreviation": "NY", 
+		"total-districts": 45
+    },
+    {
+        "abbreviation": "NC", 
+		"total-districts": 13
+    },
+    {
+        "abbreviation": "ND", 
+		"total-districts": 3
+    },
+    {
+        "abbreviation": "OH", 
+		"total-districts": 24
+    },
+    {
+        "abbreviation": "OK", 
+		"total-districts": 8
+    },
+    {
+        "abbreviation": "OR", 
+		"total-districts": 5
+    },
+    {
+        "abbreviation": "PA", 
+		"total-districts": 36
+    },
+    {
+        "abbreviation": "RI", 
+		"total-districts": 3
+    },
+    {
+        "abbreviation": "SC", 
+		"total-districts": 9
+    },
+    {
+        "abbreviation": "SD",
+		"total-districts": 3
+    },
+    {
+        "abbreviation": "TN",
+		"total-districts": 13
+    },
+    {
+        "abbreviation": "TX",
+		"total-districts": 36
+    },
+    {
+        "abbreviation": "UT",
+		"total-districts": 4
+    },
+    {
+        "abbreviation": "VT",
+		"total-districts": 6
+    },
+    {
+        "abbreviation": "VA", 
+		"total-districts": 23
+    },
+    {
+        "abbreviation": "WA",
+		"total-districts": 10
+    },
+    {
+        "abbreviation": "WV",
+		"total-districts": 6
+    },
+    {
+        "abbreviation": "WI",
+		"total-districts": 11
+    },
+    {
+        "abbreviation": "WY",
+		"total-districts": 1
+    }
+]

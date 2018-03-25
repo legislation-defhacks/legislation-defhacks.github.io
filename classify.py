@@ -49,7 +49,6 @@ def trainPersonClassifier(person, billnum):
                     else:
                         bill.append(newHash(json_data["subject"]))
 
-
                     # search for person in the votes
                     votes = json_data["votes"]
                     # yes votes (aye, yea, and yes)

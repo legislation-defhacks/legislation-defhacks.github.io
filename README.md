@@ -1,16 +1,16 @@
 # legislation-defhacks
 
-** Team Members **
+**Team Members**
 
 - Nicole Riley
 - Karishma Mandyam
 - Sasha Klezovich
 
-** Page ** 
+**Page** 
 
 https://legislation-defhacks.github.io/
 
-** Purpose **
+**Purpose**
 
 This project is for defhacks at Seattle on March 24th - 25th. Our goal is to visualize predictions for 
 votes on bills in Congress. These predications are based on past voting patterns based on bill subjects

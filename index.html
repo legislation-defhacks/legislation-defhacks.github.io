@@ -20,7 +20,7 @@ Start of webpage about ml and predicting votes for users. -->
   					data.forEach(function(d) {
   						var newOption = document.createElement("option");
   						newOption.label = d.abbreviation;
-  						newOption.innerHTML = d.abbreviation;
+  						newOption.innerHTML = d.name + "(" + d.abbreviation + ")";
   						stateSelector.appendChild(newOption);
   					});
 					//for(int i = 0; i < data.length; i++) {

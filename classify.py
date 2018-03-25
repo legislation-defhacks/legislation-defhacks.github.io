@@ -4,7 +4,12 @@ import os
 import numpy as np
 from sklearn import linear_model, datasets
 
-
+# TODO: connect up the code
+# TODO: predict for each person how the voting goes
+# TODO: create an extra page to predict stuff
+tb1 = [hash("hr"), hash("passage"), hash("1/2"), hash("To repeal the Gun-Free School Zones Act of 1990 and amendments to that Act.")]
+tb2 = [hash("hr"), hash("passage"), hash("1/2"), hash("To amend and enhance the High Seas Driftnet Fishing Moratorium Protection Act to improve the conservation of sharks.")]
+tb3 = [hash("hr"), hash("passage"), hash("1/2"), hash("To address the needs of individuals with disabilities within the Jeanne Clery Disclosure of Campus Security Policy and Campus Crime Statistics Act.")]
 def trainPersonClassifier(person):
     bills = []
     personvotes = []
@@ -59,10 +64,8 @@ def trainPersonClassifier(person):
                         personvotes.append(vote)
                     else:
                         break
-
     # print(len(bills))
     # print(len(personvotes))
-
     bill_len = len(bills)
     vote_len = len(personvotes)
 
@@ -85,6 +88,11 @@ def trainPersonClassifier(person):
         if test_ans[i] == predictions[i]:
             accuracy += 1
     print(accuracy)
+
+    Z = np.array([tb1, tb2, tb3])
+    b1 = logreg.predict(Z)
+    print(b1)
+
     return accuracy
 
-trainPersonClassifier("Jayapal")
+trainPersonClassifier("Pelosi")
